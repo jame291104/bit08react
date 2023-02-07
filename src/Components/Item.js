@@ -10,7 +10,7 @@ export const Item = ({ id, name, language, setLanguage }) => {
     <li className='list-group-item list-group-item-primary'>
       {name}
       <div className='divlist'>
-        <button onClick={deleteLang()} type='button' className='btn btn-outline-success'>
+        <button onClick={deleteLang} type='button' className='btn btn-outline-success'>
           Learned
         </button>
         <button type='button' className='btn btn-outline-dark'>
