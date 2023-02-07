@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bit08react/static/css/main.4d8ece88.css",
-    "main.js": "/bit08react/static/js/main.bf2b16cf.js",
+    "main.js": "/bit08react/static/js/main.f0d5938f.js",
     "static/js/787.673cccc8.chunk.js": "/bit08react/static/js/787.673cccc8.chunk.js",
     "index.html": "/bit08react/index.html",
     "main.4d8ece88.css.map": "/bit08react/static/css/main.4d8ece88.css.map",
-    "main.bf2b16cf.js.map": "/bit08react/static/js/main.bf2b16cf.js.map",
+    "main.f0d5938f.js.map": "/bit08react/static/js/main.f0d5938f.js.map",
     "787.673cccc8.chunk.js.map": "/bit08react/static/js/787.673cccc8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4d8ece88.css",
-    "static/js/main.bf2b16cf.js"
+    "static/js/main.f0d5938f.js"
   ]
 }
