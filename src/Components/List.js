@@ -1,28 +1,17 @@
-import React from 'react'
-import '../App.css'
-import { Button } from 'react-bootstrap/Button';
+import React from 'react';
+import '../App.css';
+import { Item } from './Item.js';
 
-export const List = ({language}) => {
-    const deleteLang = (id) => {
-        const filterlanguage = language.filter(lang => lang.id !== id)
-        setLanguage("")
-    }
-    const elements = language.map(lang => <li className="list-group-item list-group-item-primary" key={lang.id}>
-        {lang.name}
-        <div className='divlist'>
-        <button onClick={() => deleteLang(lang.id)} type="button" className="btn btn-outline-success">Learned</button>
-        <button type="button" className="btn btn-outline-dark">Rename</button>
-        </div>
-        </li>
-        )
+export const List = ({ language, setLanguage }) => {
+  const elements = language.map((lang) => (
+    <Item key={lang.id} id={lang.id} name={lang.name} language={language} setLanguage={setLanguage} />
+  ));
 
   return (
     <div>
-       <ul className="list-group">
-         {elements}
-       </ul>
+      <ul className='list-group'>{elements}</ul>
     </div>
-  )
-}
+  );
+};
 
-export default List
+export default List;
