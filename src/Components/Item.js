@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const Item = ({ id, name, language, setLanguage }) => {
-  const deleteLang = () => {
+export const Item = ({ id, name, language, setLanguage, rename, setRename }) => {
+   const deleteLang = () => {
     const newArray = language.filter((lang) => lang.id !== id);
     setLanguage(newArray);
   };
@@ -13,7 +13,7 @@ export const Item = ({ id, name, language, setLanguage }) => {
         <button onClick={deleteLang} type='button' className='btn btn-outline-success'>
           Learned
         </button>
-        <button type='button' className='btn btn-outline-dark'>
+        <button onClick={() => setRename(id)} type='button' className='btn btn-outline-dark'>
           Rename
         </button>
       </div>
