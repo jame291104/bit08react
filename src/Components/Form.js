@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from 'react'
 import {  } from "../App.css";
 import { v4 as uuidv4 } from 'uuid';
+import Swal  from "sweetalert2";
 
 
 export const Form = ({lang, setLang, language, setLanguage, rename, setRename}) => { 
@@ -19,8 +20,17 @@ export const Form = ({lang, setLang, language, setLanguage, rename, setRename}) 
 
     const handleAdd = (e) => {
         e.preventDefault()
+       if (!lang.name.trim()) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Apparently you did not write anything',
+            footer: 'Try again please'
+          })
+       } else {
         setLanguage([...language, lang])
         setLang({id: null, name: "", learned: false})
+       }
     }
 
      const handleInputRename = (e) => {
